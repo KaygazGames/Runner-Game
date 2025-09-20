@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:padding="12dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Skin Seç (kaydırın)"
+android:textSize="18sp"
+android:layout_gravity="center_horizontal"
+android:paddingBottom="8dp"/>
+
+<ImageView
+android:id="@+id/previewImage"
+android:layout_width="200dp"
+android:layout_height="200dp"
+android:layout_gravity="center_horizontal"
+android:scaleType="centerCrop"
+android:contentDescription="Preview" />
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/skinRecycler"
+android:layout_width="match_parent"
+android:layout_height="80dp"
+android:layout_marginTop="8dp"
+android:clipToPadding="false"
+android:paddingLeft="12dp"
+android:paddingRight="12dp"/>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center"
+android:layout_marginTop="8dp">
+
+<Button
+android:id="@+id/cancelButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="İptal"/>
+
+<Button
+android:id="@+id/okButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Uygula"
+android:layout_marginStart="12dp"/>
+</LinearLayout>
+</LinearLayout>

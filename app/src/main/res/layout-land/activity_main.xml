@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<!-- Oyun alanı -->
+<com.example.game.GameView
+android:id="@+id/gameView"
+android:layout_width="match_parent"
+android:layout_height="match_parent" />
+
+<!-- Üstte skor bilgileri -->
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="8dp"
+android:background="@android:color/transparent">
+
+<TextView
+android:id="@+id/scoreText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Score: 0"
+android:textSize="20sp"
+android:textColor="@android:color/black" />
+
+<TextView
+android:id="@+id/highScoreText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="High Score: 0"
+android:textSize="20sp"
+android:textColor="@android:color/black" />
+</LinearLayout>
+
+<!-- Alt kısımdaki butonlar -->
+<LinearLayout
+android:orientation="horizontal"
+android:gravity="center"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="bottom"
+android:background="@android:color/transparent"
+android:padding="8dp">
+
+<Button
+android:id="@+id/crouchButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Eğil"
+android:background="@android:color/transparent"
+android:textColor="@android:color/black" />
+
+<Button
+android:id="@+id/pauseButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Duraklat"
+android:layout_marginStart="16dp"
+android:background="@android:color/transparent"
+android:textColor="@android:color/black" />
+
+<Button
+android:id="@+id/skinButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Skin"
+android:layout_marginStart="16dp"
+android:background="@android:color/transparent"
+android:textColor="@android:color/black" />
+</LinearLayout>
+
+<!-- Oyun bitince çıkan menü -->
+<LinearLayout
+android:id="@+id/gameOverLayout"
+android:orientation="vertical"
+android:gravity="center"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#AA000000"
+android:visibility="gone"
+android:elevation="10dp"
+android:clickable="true"
+android:focusable="true">
+
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Oyun Bitti"
+android:textSize="30sp"
+android:textColor="@android:color/white" />
+
+<Button
+android:id="@+id/restartButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Tekrar Başla"
+android:layout_marginTop="16dp"
+android:background="@android:color/transparent"
+android:textColor="@android:color/white" />
+
+<Button
+android:id="@+id/reviveButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Yeniden Doğ"
+android:layout_marginTop="8dp"
+android:background="@android:color/transparent"
+android:textColor="@android:color/white" />
+</LinearLayout>
+
+<!-- Reklam görünümlü kutu -->
+<LinearLayout
+android:id="@+id/adLayout"
+android:orientation="vertical"
+android:gravity="center"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#AAFFFFFF"
+android:visibility="gone">
+
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Reklam"
+android:textSize="24sp"
+android:textColor="@android:color/black" />
+
+<Button
+android:id="@+id/resumeAfterAd"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Devam Et"
+android:layout_marginTop="16dp"
+android:background="@android:color/transparent"
+android:textColor="@android:color/black" />
+</LinearLayout>
+
+</FrameLayout>
